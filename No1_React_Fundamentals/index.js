@@ -9,5 +9,6 @@ import PizzaTranslator from './HandlingTextInput';
 import MyScrollView from './UsingAScrollView';
 import MyFlatList from './UsingListViews';
 import MySectionListView from './UsingSectionListViews';
+import MyModule from './PlatformModule';
 
-AppRegistry.registerComponent(appName, () => MySectionListView);
+AppRegistry.registerComponent(appName, () => MyModule);
