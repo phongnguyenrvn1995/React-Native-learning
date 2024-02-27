@@ -7,6 +7,7 @@ import { age, city, hairColor, myArray, myArray1, myArray2, myArray3, myArray4, 
 import { myArr, myArr2, myObj1, myObj2 } from './Spread';
 import { useState } from 'react';
 import { element, element01 } from './JSX';
+import { myElement } from './ReactElements';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -27,6 +28,7 @@ export default function App() {
         title='Fetch'
         onPress={async () => {
           console.log("press!");
+          console.log(JSON.stringify(myElement));
           requestAPI((data) => {
             setData(data);
           })
