@@ -6,6 +6,7 @@ import { Cat } from './MyClasses';
 import { age, city, hairColor, myArray, myArray1, myArray2, myArray3, myArray4, myObject, name, name1, others, printMyArray, printMyObject } from './Destructing';
 import { myArr, myArr2, myObj1, myObj2 } from './Spread';
 import { useState } from 'react';
+import { element, element01 } from './JSX';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -21,6 +22,7 @@ export default function App() {
       <Text>{myArr}</Text>
       <Text>{myArr2}</Text>
       <Text>{data}</Text>
+      {element01}
       <Button
         title='Fetch'
         onPress={async () => {
