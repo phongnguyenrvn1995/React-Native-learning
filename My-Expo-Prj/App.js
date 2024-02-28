@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { element, element01 } from './JSX';
 import { myElement } from './ReactElements';
 import MyMinimalComponent, { MyBehaviorComponent, MyComposingComponent, MyTypeScriptComponent } from './FunctionComponents';
+import { MyClassComponent } from './ClassComponents';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -41,6 +42,8 @@ export default function App() {
         <MyComposingComponent title='My Composing Component' />
         <MyTypeScriptComponent title='My TypeScript Component' color='#666666' />
         <MyBehaviorComponent />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Class Components</Text>
+        <MyClassComponent myTitle='MyClassComponent' myColor='#888888'/>
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
