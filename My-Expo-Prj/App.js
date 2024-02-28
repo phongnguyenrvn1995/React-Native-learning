@@ -10,6 +10,7 @@ import { element, element01 } from './JSX';
 import { myElement } from './ReactElements';
 import MyMinimalComponent, { MyBehaviorComponent, MyComposingComponent, MyTypeScriptComponent } from './FunctionComponents';
 import { MyClassComponent } from './ClassComponents';
+import { MyCustomEvent } from './Event';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -44,6 +45,8 @@ export default function App() {
         <MyBehaviorComponent />
         <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Class Components</Text>
         <MyClassComponent myTitle='MyClassComponent' myColor='#888888'/>
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Events</Text>
+        <MyCustomEvent />
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
