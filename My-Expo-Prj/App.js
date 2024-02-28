@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, Dimensions, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { M1, M2 } from './my_libs'
 import { y1, z } from './ArrowFunc';
 import { Cat } from './MyClasses';
@@ -8,6 +8,7 @@ import { myArr, myArr2, myObj1, myObj2 } from './Spread';
 import { useState } from 'react';
 import { element, element01 } from './JSX';
 import { myElement } from './ReactElements';
+import MyMinimalComponent, { MyBehaviorComponent, MyComposingComponent, MyTypeScriptComponent } from './FunctionComponents';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -18,24 +19,31 @@ export default function App() {
 
   const [data, setData] = useState('');
   return (
-    <View style={styles.container}>
-      {M2()}
-      <Text>{myArr}</Text>
-      <Text>{myArr2}</Text>
-      <Text>{data}</Text>
-      {element01}
-      <Button
-        title='Fetch'
-        onPress={async () => {
-          console.log("press!");
-          console.log(JSON.stringify(myElement));
-          requestAPI((data) => {
-            setData(data);
-          })
-        }}
-       />
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={{flex: 1}}>
+        {M2()}
+        <Text>{myArr}</Text>
+        <Text>{myArr2}</Text>
+        <Text>{data}</Text>
+        {element01}
+        <Button
+          title='Fetch'
+          onPress={async () => {
+            console.log("press!");
+            console.log(JSON.stringify(myElement));
+            requestAPI((data) => {
+              setData(data);
+            })
+          }}
+        />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Func Components</Text>
+        <MyMinimalComponent/>
+        <MyComposingComponent title='My Composing Component' />
+        <MyTypeScriptComponent title='My TypeScript Component' color='#666666' />
+        <MyBehaviorComponent />
+        <StatusBar style="auto" />
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
