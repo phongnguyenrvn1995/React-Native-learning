@@ -12,6 +12,7 @@ import MyMinimalComponent, { MyBehaviorComponent, MyComposingComponent, MyTypeSc
 import { MyClassComponent } from './ClassComponents';
 import { MyCustomEvent } from './Event';
 import { MyCard, MyCard01, MyCard02, MyCard03 } from './ConditionalRendering';
+import { MyInputText } from './UserInput';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -53,6 +54,8 @@ export default function App() {
         <MyCard01 title="Rendering with ||" element={<Button title="I'm here" />} />
         <MyCard02 title="Rendering with ternary ?" buttonTitle="I'm here" />
         <MyCard03 title="Rendering with if/else" />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>User Input</Text>
+        <MyInputText />
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
