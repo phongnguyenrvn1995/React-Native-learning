@@ -11,6 +11,7 @@ import { myElement } from './ReactElements';
 import MyMinimalComponent, { MyBehaviorComponent, MyComposingComponent, MyTypeScriptComponent } from './FunctionComponents';
 import { MyClassComponent } from './ClassComponents';
 import { MyCustomEvent } from './Event';
+import { MyCard, MyCard01, MyCard02, MyCard03 } from './ConditionalRendering';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -47,6 +48,11 @@ export default function App() {
         <MyClassComponent myTitle='MyClassComponent' myColor='#888888'/>
         <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Events</Text>
         <MyCustomEvent />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Conditional Rendering</Text>
+        <MyCard title="Rendering with &&" showButton="I'm not empty" />
+        <MyCard01 title="Rendering with ||" element={<Button title="I'm here" />} />
+        <MyCard02 title="Rendering with ternary ?" buttonTitle="I'm here" />
+        <MyCard03 title="Rendering with if/else" />
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
