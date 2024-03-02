@@ -13,6 +13,7 @@ import { MyClassComponent } from './ClassComponents';
 import { MyCustomEvent } from './Event';
 import { MyCard, MyCard01, MyCard02, MyCard03 } from './ConditionalRendering';
 import { MyInputText } from './UserInput';
+import { IdAssignment, MyList, MyList01 } from './ListsAndKeys';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -56,6 +57,10 @@ export default function App() {
         <MyCard03 title="Rendering with if/else" />
         <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>User Input</Text>
         <MyInputText />
+        <IdAssignment />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Lists and Keys</Text>
+        <MyList />
+        <MyList01 />
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
