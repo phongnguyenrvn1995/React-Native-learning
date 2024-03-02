@@ -14,6 +14,7 @@ import { MyCustomEvent } from './Event';
 import { MyCard, MyCard01, MyCard02, MyCard03 } from './ConditionalRendering';
 import { MyInputText } from './UserInput';
 import { IdAssignment, MyList, MyList01 } from './ListsAndKeys';
+import { MemoTesting } from './PerformanceMemo';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -61,6 +62,8 @@ export default function App() {
         <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Lists and Keys</Text>
         <MyList />
         <MyList01 />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Perfomance</Text>
+        <MemoTesting />
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
