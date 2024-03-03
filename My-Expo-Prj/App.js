@@ -15,6 +15,11 @@ import { MyCard, MyCard01, MyCard02, MyCard03 } from './ConditionalRendering';
 import { MyInputText } from './UserInput';
 import { IdAssignment, MyList, MyList01 } from './ListsAndKeys';
 import { MemoTesting } from './PerformanceMemo';
+import { MyUseStateFunc } from './UseState';
+import { MyUseReducer } from './UseReducer';
+import { MyUseEffects } from './UseEffects';
+import { MyUseRef } from './UseRef';
+import { MyCustomHook } from './CustomHook';
 
 export default function App() {
   let cat = new Cat('Meo', 1);
@@ -64,6 +69,16 @@ export default function App() {
         <MyList01 />
         <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Perfomance</Text>
         <MemoTesting />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>UseState</Text>
+        <MyUseStateFunc />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>UseReducer</Text>
+        <MyUseReducer />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>UseEffect</Text>
+        <MyUseEffects />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>UseRef</Text>
+        <MyUseRef />
+        <Text style={{width: Dimensions.get('window').width, textAlign: 'center', backgroundColor: 'yellow'}}>Custom Hook</Text>
+        <MyCustomHook />
         <StatusBar style="auto" />
       </ScrollView>
     </SafeAreaView>
