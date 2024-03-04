@@ -21,10 +21,12 @@ import { MyUseEffects } from './UseEffects';
 import { MyUseRef } from './UseRef';
 import { MyCustomHook } from './CustomHook';
 import { MyView } from './MyView';
+import { MyLayout } from './MyLayout';
 
 export default function App() {
   return (
-    <MyView />
+    <MyLayout />
+    // <MyView />
   )
 }
 
