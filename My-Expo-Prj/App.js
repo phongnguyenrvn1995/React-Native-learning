@@ -20,8 +20,15 @@ import { MyUseReducer } from './UseReducer';
 import { MyUseEffects } from './UseEffects';
 import { MyUseRef } from './UseRef';
 import { MyCustomHook } from './CustomHook';
+import { MyView } from './MyView';
 
 export default function App() {
+  return (
+    <MyView />
+  )
+}
+
+export function App01() {
   let cat = new Cat('Meo', 1);
   console.log(cat);
   console.log(name1, hairColor, city, others);
