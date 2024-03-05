@@ -22,10 +22,12 @@ import { MyUseRef } from './UseRef';
 import { MyCustomHook } from './CustomHook';
 import { MyView } from './MyView';
 import { MyLayout } from './MyLayout';
+import { MyText } from './MyText';
 
 export default function App() {
   return (
-    <MyLayout />
+    <MyText/>
+    // <MyLayout />
     // <MyView />
   )
 }
