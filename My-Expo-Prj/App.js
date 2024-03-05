@@ -23,10 +23,12 @@ import { MyCustomHook } from './CustomHook';
 import { MyView } from './MyView';
 import { MyLayout } from './MyLayout';
 import { MyText } from './MyText';
+import { MyImage } from './MyImage';
 
 export default function App() {
   return (
-    <MyText/>
+    <MyImage />
+    // <MyText/>
     // <MyLayout />
     // <MyView />
   )
