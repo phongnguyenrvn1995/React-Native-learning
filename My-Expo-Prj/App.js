@@ -24,10 +24,12 @@ import { MyView } from './MyView';
 import { MyLayout } from './MyLayout';
 import { MyText } from './MyText';
 import { MyImage } from './MyImage';
+import { MyButton } from './MyButton';
 
 export default function App() {
   return (
-    <MyImage />
+    <MyButton />
+    // <MyImage />
     // <MyText/>
     // <MyLayout />
     // <MyView />
