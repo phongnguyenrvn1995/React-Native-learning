@@ -27,10 +27,12 @@ import { MyImage } from './MyImage';
 import { MyButton } from './MyButton';
 import { MyTouchableOpacity } from './MyTouchableOpacity';
 import { MyTouchableHighlight } from './MyTouchableHighlight';
+import { MyScrollView } from './MyScrollView';
 
 export default function App() {
   return (
-    <MyTouchableHighlight />
+    <MyScrollView />
+    // <MyTouchableHighlight />
     // <MyTouchableOpacity />
     // <MyButton />
     // <MyImage />
