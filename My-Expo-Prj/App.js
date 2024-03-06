@@ -25,10 +25,14 @@ import { MyLayout } from './MyLayout';
 import { MyText } from './MyText';
 import { MyImage } from './MyImage';
 import { MyButton } from './MyButton';
+import { MyTouchableOpacity } from './MyTouchableOpacity';
+import { MyTouchableHighlight } from './MyTouchableHighlight';
 
 export default function App() {
   return (
-    <MyButton />
+    <MyTouchableHighlight />
+    // <MyTouchableOpacity />
+    // <MyButton />
     // <MyImage />
     // <MyText/>
     // <MyLayout />
