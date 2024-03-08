@@ -28,10 +28,15 @@ import { MyButton } from './MyButton';
 import { MyTouchableOpacity } from './MyTouchableOpacity';
 import { MyTouchableHighlight } from './MyTouchableHighlight';
 import { MyScrollView } from './MyScrollView';
+import { MyFlatList } from './MyFlatList';
+import { MySectionHeterogenousList, MySectionHomogenousList } from './MySectionList';
 
 export default function App() {
   return (
-    <MyScrollView />
+    <MySectionHeterogenousList />
+    // <MySectionHomogenousList />
+    // <MyFlatList />
+    // <MyScrollView />
     // <MyTouchableHighlight />
     // <MyTouchableOpacity />
     // <MyButton />
