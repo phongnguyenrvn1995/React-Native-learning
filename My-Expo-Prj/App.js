@@ -30,10 +30,12 @@ import { MyTouchableHighlight } from './MyTouchableHighlight';
 import { MyScrollView } from './MyScrollView';
 import { MyFlatList } from './MyFlatList';
 import { MySectionHeterogenousList, MySectionHomogenousList } from './MySectionList';
+import { MyNavigation } from './MyNavigation';
 
 export default function App() {
   return (
-    <MySectionHeterogenousList />
+    <MyNavigation />
+    // <MySectionHeterogenousList />
     // <MySectionHomogenousList />
     // <MyFlatList />
     // <MyScrollView />
