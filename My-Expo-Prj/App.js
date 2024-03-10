@@ -31,10 +31,12 @@ import { MyScrollView } from './MyScrollView';
 import { MyFlatList } from './MyFlatList';
 import { MySectionHeterogenousList, MySectionHomogenousList } from './MySectionList';
 import { MyNavigation } from './MyNavigation';
+import MyReactNavigation from './MyReactNavigation';
 
 export default function App() {
   return (
-    <MyNavigation />
+    <MyReactNavigation />
+    // <MyNavigation />
     // <MySectionHeterogenousList />
     // <MySectionHomogenousList />
     // <MyFlatList />
