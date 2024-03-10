@@ -10,5 +10,6 @@ import MyScrollView from './UsingAScrollView';
 import MyFlatList from './UsingListViews';
 import MySectionListView from './UsingSectionListViews';
 import MyModule from './PlatformModule';
+import MyNavigation from './MyNavigation';
 
-AppRegistry.registerComponent(appName, () => MyModule);
+AppRegistry.registerComponent(appName, () => MyNavigation);
