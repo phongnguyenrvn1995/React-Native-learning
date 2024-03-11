@@ -32,10 +32,12 @@ import { MyFlatList } from './MyFlatList';
 import { MySectionHeterogenousList, MySectionHomogenousList } from './MySectionList';
 import { MyNavigation } from './MyNavigation';
 import MyReactNavigation from './MyReactNavigation';
+import { MyAsyncStorage } from './MyAsyncStorage/MyAsyncStorage';
 
 export default function App() {
   return (
-    <MyReactNavigation />
+    <MyAsyncStorage />
+    // <MyReactNavigation />
     // <MyNavigation />
     // <MySectionHeterogenousList />
     // <MySectionHomogenousList />
