@@ -33,10 +33,12 @@ import { MySectionHeterogenousList, MySectionHomogenousList } from './MySectionL
 import { MyNavigation } from './MyNavigation';
 import MyReactNavigation from './MyReactNavigation';
 import { MyAsyncStorage } from './MyAsyncStorage/MyAsyncStorage';
+import { MyNetworking } from './MyNetworking/MyNetworking';
 
 export default function App() {
   return (
-    <MyAsyncStorage />
+    <MyNetworking />
+    // <MyAsyncStorage />
     // <MyReactNavigation />
     // <MyNavigation />
     // <MySectionHeterogenousList />
