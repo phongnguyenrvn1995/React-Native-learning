@@ -34,10 +34,14 @@ import { MyNavigation } from './MyNavigation';
 import MyReactNavigation from './MyReactNavigation';
 import { MyAsyncStorage } from './MyAsyncStorage/MyAsyncStorage';
 import { MyNetworking } from './MyNetworking/MyNetworking';
+import { MyAnimation } from './MyAnimation/MyAnimation';
+import { MyGestures } from './MyGestures/MyGestures';
 
 export default function App() {
   return (
-    <MyNetworking />
+    <MyGestures />
+    // <MyAnimation />
+    // <MyNetworking />
     // <MyAsyncStorage />
     // <MyReactNavigation />
     // <MyNavigation />
