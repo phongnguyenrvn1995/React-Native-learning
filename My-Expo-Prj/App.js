@@ -36,10 +36,16 @@ import { MyAsyncStorage } from './MyAsyncStorage/MyAsyncStorage';
 import { MyNetworking } from './MyNetworking/MyNetworking';
 import { MyAnimation } from './MyAnimation/MyAnimation';
 import { MyGestures } from './MyGestures/MyGestures';
+import { MyGestureHandler } from './MyGestureHandler/MyGestureHandler';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   return (
-    <MyGestures />
+    <GestureHandlerRootView style={{flex: 1}}>
+      <MyGestureHandler />
+    </GestureHandlerRootView>
+    
+    // <MyGestures />
     // <MyAnimation />
     // <MyNetworking />
     // <MyAsyncStorage />
