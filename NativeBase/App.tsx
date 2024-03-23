@@ -5,6 +5,7 @@
  * @format
  */
 
+import { Alert, Box, Button, Center, CloseIcon, HStack, IconButton, NativeBaseProvider, Stack, Text, VStack } from 'native-base';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -12,7 +13,6 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
   View,
 } from 'react-native';
@@ -29,52 +29,55 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-      </ScrollView>
-    </SafeAreaView>
+    <NativeBaseProvider>
+      <SafeAreaView>
+
+      <Box alignItems="center">
+        <Button onPress={() => console.log("hello world")}>Click Me</Button>
+      </Box>
+      <Example />
+      </SafeAreaView>
+    </NativeBaseProvider>
   );
 }
+
+const Example = () => {
+  return <Stack direction={{
+    base: "column",
+    md: "row"
+  }} space={2} alignItems={{
+    base: "center",
+    md: "flex-start"
+  }}>
+      <Button isLoading>Button</Button>
+      <Button isLoading isLoadingText="Submitting">
+        Button
+      </Button>
+      <Button isLoading spinnerPlacement="end" isLoadingText="Submitting">
+        Button
+      </Button>
+      <Button isLoading _loading={{
+      bg: "amber.400:alpha.70",
+      _text: {
+        color: "coolGray.700"
+      }
+    }} _spinner={{
+      color: "white"
+    }} isLoadingText="Submitting">
+        Button
+      </Button>
+      <Button isLoading isLoadingText="Submitting" variant="outline">
+        Button
+      </Button>
+    </Stack>;
+};
 
 const styles = StyleSheet.create({
   sectionContainer: {
