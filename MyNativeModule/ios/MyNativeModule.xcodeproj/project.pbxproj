@@ -14,6 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-MyNativeModule-MyNativeModuleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-MyNativeModule-MyNativeModuleTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B6DF92EC2BB3221700B914B6 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF92EB2BB3221700B914B6 /* MyView.swift */; };
+		B6DF92EE2BB3224F00B914B6 /* MyViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF92ED2BB3224F00B914B6 /* MyViewManager.swift */; };
+		B6DF92F22BB3252D00B914B6 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF92F12BB3252D00B914B6 /* MyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-MyNativeModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyNativeModule.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MyNativeModule/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-MyNativeModule-MyNativeModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNativeModule-MyNativeModuleTests.release.xcconfig"; path = "Target Support Files/Pods-MyNativeModule-MyNativeModuleTests/Pods-MyNativeModule-MyNativeModuleTests.release.xcconfig"; sourceTree = "<group>"; };
+		B6DF92EB2BB3221700B914B6 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyView.swift; path = MyNativeModule/MyView.swift; sourceTree = "<group>"; };
+		B6DF92ED2BB3224F00B914B6 /* MyViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyViewManager.swift; path = MyNativeModule/MyViewManager.swift; sourceTree = "<group>"; };
+		B6DF92F12BB3252D00B914B6 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MyView.m; path = MyNativeModule/MyView.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -92,6 +98,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				B6DF92F12BB3252D00B914B6 /* MyView.m */,
 			);
 			name = MyNativeModule;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B6DF92EB2BB3221700B914B6 /* MyView.swift */,
+				B6DF92ED2BB3224F00B914B6 /* MyViewManager.swift */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -206,7 +215,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -392,8 +401,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DF92EC2BB3221700B914B6 /* MyView.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				B6DF92EE2BB3224F00B914B6 /* MyViewManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				B6DF92F22BB3252D00B914B6 /* MyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-MyNativeModule-MyNativeModuleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -439,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-MyNativeModule-MyNativeModuleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = MyNativeModuleTests/Info.plist;
